@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWU - Front office online reservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js" defer></script>
+
+</head>
+<body>
+    <video src="./video/pwu.mp4" autoplay loop></video>
+    <header id="navbar">
+        <a href="#">PWU</a>
+        <a href="#" id="menu" onclick="collapser()"><img src="./img/menu.png" alt=""></a>
+        <nav id="collapse">
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Courses</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+
+    <div id="form">
+        <div id="banner">Reservation Now!</div>
+        <form action="#">
+            <div class="form-group">
+                <label for="#">Your Name</label>
+                <input type="text" placeholder="[Last-Name] [First-Name]">
+            </div>
+            <div class="form-group">
+                <label for="#">Your Preferred Course</label>
+                <select name="" id="">
+                    <option value="#">BS. Information System</option>
+                    <option value="#">BS. Hotel Room management</option>
+                    <option value="#">BS. Tourism Management</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="#">Your mobile no.</label>
+                <input type="text" placeholder="+639XXXXXXXX">
+            </div>
+            <div>
+                <label for="">Your Email</label>
+                <input type="text" placeholder="example@gmail.com">
+            </div>
+           
+        </form>
+        <button type="button">Login</button>
+    </div>
+    <footer id="footer">
+        Created By : John Emil Ramil
+    </footer>
+</body>
+</html>

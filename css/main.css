@@ -1,0 +1,171 @@
+:root {
+    --primary:#7b1113;
+    --secondary:#ED7D7D;
+}
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0px;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    padding: 0px;
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+#navbar{
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar ul {
+    list-style-type: none;
+}
+#navbar li {
+    display: inline;
+    margin-right: 1em;
+    padding:0px 0.5em;
+    border-radius: 10px;
+
+    transition:background ease-in 250ms;
+}
+
+#navbar li a {
+    color: white;
+    text-decoration: none;
+}
+#navbar li:hover{
+    background: var(--secondary);
+
+
+}
+#navbar > a  {
+    color:white;
+    margin-left: 1em;
+    text-decoration: none;
+}
+#form {
+    position: absolute;
+    right: 1em;
+    background: #fff;
+    top: 13vh;
+    width: 30vw;
+    border-radius: 10px;
+    animation-name: pop;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    z-index: 0;
+
+}
+#form * {
+    display: block;
+}
+#form >div {
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0px;
+    background: var(--primary);
+    color:white;
+}
+#form form {
+    padding: 0.5em;
+}
+#form input ,select{
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    outline: none;
+    transition: all ease-in 250ms;
+}
+#form input:hover{
+    background: var(--primary);
+    color: white;
+}
+#form select:hover{
+    background: var(--primary);
+    color: white;
+}
+.form-group {
+    margin-bottom: 0.5em;
+}
+#form button {
+    width: 100%;
+    background: var(--primary);
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    color:white;
+    outline: none;
+}
+#form button:hover{
+    background: var(--secondary);
+}
+@keyframes pop{
+    to{
+        transform: scale(0.96);
+    }
+}
+footer{
+    position: absolute;
+    background: var(--primary);
+    bottom: 10px;
+    padding: 0px 0.5em;
+    color: white;
+    transition: all 250ms ease-in;
+}
+#menu {
+    display: none;
+}
+@media screen and (max-width:600px){
+    #menu {
+        display: block;
+        margin-right: 1em;
+    }
+    #menu img {
+        margin: 5%;
+        height: 90%;
+    }
+    #navbar nav {
+        background: #222;
+        position: fixed;
+        z-index: 2;
+        width: 100vw;
+        top: 10vh;
+        left: 0px;
+        text-align: center;
+        transition: all ease-in 250ms;
+    }
+    #navbar ul li {
+        display: block;z-index: 999;
+    }
+    #form {
+        right: 0;
+        display: block;
+        background: #fff;
+        margin: auto;
+        top: 13vh;
+        width: 100vw;
+        border-radius: 10px;
+        animation-name: pop;
+        animation-duration: 800ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    
+    }
+    #navbar nav {
+        display: none;
+    }
+}
